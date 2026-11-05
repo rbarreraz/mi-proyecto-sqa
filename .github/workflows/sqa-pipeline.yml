@@ -27,7 +27,7 @@ jobs:
 
       # Etapa 2: Test
       - name: Ejecutar Pruebas Automatizadas y Cobertura
-        run: npm test -- --coverage || true
+        run: npm test -- --coverage --coverageReporters="lcov" || true
 
       # Etapa 3 & 4: Analyze y Report (SonarCloud)
       - name: Análisis Estático con SonarCloud
